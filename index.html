@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" 
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 
 <body>
     <div class="phone-container">
-        <div class="phone-screen">
+        <!-- PANTALLA PRINCIPAL -->
+        <div class="phone-screen" id="home">
             <div class="header">
                 <div class="settings-icon"><i class="fa-solid fa-gear"></i></div>
                 <div class="app-title">GREENPOINT</div>
@@ -25,42 +25,42 @@
                 </div>
 
                 <div class="menu-grid">
-                    <div class="menu-item">
+                    <div class="menu-item" id="open-map">
                         <div class="menu-icon">
                             <i class="fa-regular fa-map icon"></i>
                         </div>
                         <div class="menu-label">Mapa</div>
                     </div>
 
-                    <div class="menu-item">
+                    <div class="menu-item" id="open-report">
                         <div class="menu-icon">
                         <i class="fa-solid fa-triangle-exclamation icon"></i>
                     </div>
                         <div class="menu-label">Reportar</div>
                     </div>
 
-                    <div class="menu-item">
+                    <div class="menu-item" id="open-events">
                         <div class="menu-icon">
                             <i class="fa-regular fa-calendar icon"></i>
                         </div>
                         <div class="menu-label">Actividades</div>
                     </div>
 
-                    <div class="menu-item">
+                    <div class="menu-item" id="open-scan">
                         <div class="menu-icon">
                             <i class="fa-solid fa-qrcode icon"></i>
                         </div>
                         <div class="menu-label">Escanea</div>
                     </div>
 
-                    <div class="menu-item">
+                    <div class="menu-item" id="open-logros">
                         <div class="menu-icon">
                             <i class="fa-solid fa-trophy icon"></i>
                         </div>
                         <div class="menu-label">Logros</div>
                     </div>
 
-                    <div class="menu-item">
+                    <div class="menu-item" id="open-perfil">
                         <div class="menu-icon">
                             <i class="fa-regular fa-user icon"></i>
                         </div>
@@ -69,7 +69,199 @@
                 </div>
             </div>
         </div>
+        <!-- TAREA 1 PANTALLA 1-->
+        <div class="phone-screen" id="map1">
+            <div class="header">
+                <div class="app-title">Buscar puntos cercanos</div>
+            </div>
+            <div class="content">
+                <div>
+                    
+                </div>
+            <button class="btn volverhome">Volver</button>
+            </div>
+        </div>
+        <!-- TAREA 1 PANTALLA 2-->
+        <div class="phone-screen" id="map2">
+            <div class="header">
+                <div class="app-title">Buscar puntos cercanos</div>
+            </div>
+            <div class="content">
+                <div>
+        
+                </div>
+                <button class="btn volverhome">Volver</button>
+            </div>
+        </div>
+        <!-- TAREA 1 PANTALLA 3.1-->
+        <div class="phone-screen" id="map31">
+            <div class="header">
+                <div class="app-title">Buscar puntos cercanos</div>
+            </div>
+            <div class="content">
+                <div>
+        
+                </div>
+                <button class="btn volverhome">Volver</button>
+            </div>
+        </div>
+        <!-- TAREA 1 PANTALLA 3.2-->
+        <div class="phone-screen" id="map32">
+            <div class="header">
+                <div class="app-title">Buscar puntos cercanos</div>
+            </div>
+            <div class="content">
+                <div>
+        
+                </div>
+                <button class="btn volverhome">Volver</button>
+            </div>
+        </div>
+        <!-- TAREA 2 PANTALLA 1-->
+        <div class="phone-screen" id="events1">
+            <div class="header">
+                <div class="app-title">Actividades programadas</div>
+            </div>
+            <div class="content">
+
+                <button class="btn volverhome">Volver</button>
+            </div>
+        </div>
+        <!-- TAREA 2 PANTALLA 2-->
+        <div class="phone-screen" id="events2">
+            <div class="header">
+                <div class="app-title">Actividad: Festival Conservamos 2025</div>
+            </div>
+            <div class="content">
+                <div>
+        
+                </div>
+                <button class="btn volverhome">Volver</button>
+            </div>
+        </div>
+        <!-- TAREA 3 PANTALLA 1-->
+        <div class="phone-screen" id="logros1">
+            <div class="header">
+                <div class="app-title" style="text-align: center;">Tus logros ecológicos</div>
+            </div>
+            <div class="content">
+                <div>
+        
+                </div>
+                <button class="btn volverhome">Volver</button>
+            </div>
+        </div>
+        <!-- TAREA 3 PANTALLA 2-->
+        <div class="phone-screen" id="logros2">
+            <div class="header">
+                <div class="app-title">Logros</div>
+            </div>
+            <div class="content">
+                <div>
+        
+                </div>
+                <button class="btn volverhome">Volver</button>
+            </div>
+        </div>
+        <!-- TAREA 3 PANTALLA 3-->
+        <div class="phone-screen" id="logros3">
+            <div class="header">
+                <div class="app-title">Ranking distrital</div>
+            </div>
+            <div class="content">
+                <div>
+        
+                </div>
+                <button class="btn volverhome">Volver</button>
+            </div>
+        </div>
+        <!-- TAREA 4 PANTALLA 1-->
+        <div class="phone-screen" id="qr1">
+            <div class="header">
+                <div class="app-title">Escanea en puntos de reciclaje o camiones</div>
+            </div>
+            <div class="content">
+                <div>
+        
+                </div>
+                <button class="btn volverhome">Volver</button>
+            </div>
+        </div>
+        <!-- TAREA 4 PANTALLA 2-->
+        <div class="phone-screen" id="qr2">
+            <div class="header">
+                <div class="app-title">Graba un video corto como evidencia</div>
+            </div>
+            <div class="content">
+                <div>
+        
+                </div>
+                <button class="btn volverhome">Volver</button>
+            </div>
+        </div>
+        <!-- TAREA 4 PANTALLA 3-->
+        <div class="phone-screen" id="qr3">
+            <div class="header">
+                <div class="app-title">Sube tu video para tu recompensa</div>
+            </div>
+            <div class="content">
+                <div>
+        
+                </div>
+                <button class="btn volverhome">Volver</button>
+            </div>
+        </div>
+        <!-- TAREA 5 PANTALLA 1-->
+        <div class="phone-screen" id="reportar1">
+            <div class="header">
+                <div class="app-title">Toma una foto para evidenciar tu reporte</div>
+            </div>
+            <div class="content">
+                <div>
+        
+                </div>
+                <button class="btn volverhome">Volver</button>
+            </div>
+        </div>
+        <!-- TAREA 5 PANTALLA 2-->
+        <div class="phone-screen" id="reporte2">
+            <div class="header">
+                <div class="app-title">Indica el nivel de peligro</div>
+            </div>
+            <div class="content">
+                <div>
+        
+                </div>
+                <button class="btn volverhome">Volver</button>
+            </div>
+        </div>
+        <!-- TAREA 6 PANTALLA 1-->
+        <div class="phone-screen" id="perfil1">
+            <div class="header">
+                <div class="app-title">Perfil</div>
+            </div>
+            <div class="content">
+                <div>
+        
+                </div>
+                <button class="btn volverhome">Volver</button>
+            </div>
+        </div>
+        <!-- TAREA 6 PANTALLA 2-->
+        <div class="phone-screen" id="perfil2">
+            <div class="header">
+                <div class="app-title">Historial de actividades</div>
+            </div>
+            <div class="content">
+                <div>
+        
+                </div>
+                <button class="btn volverhome">Volver</button>
+            </div>
+        </div>
+
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

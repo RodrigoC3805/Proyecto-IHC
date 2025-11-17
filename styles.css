@@ -59,16 +59,17 @@ body {
 	font-size: 22px;
 	font-weight: bold;
 	letter-spacing: 1px;
+	text-align: center;
 }
 
 .content {
-	flex: 1;
-	padding: 30px 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+    flex: 1;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;         
 }
-
 .welcome-text {
 	color: #1a1a1a;
 	font-size: 28px;
@@ -99,7 +100,9 @@ body {
 	transition: all 0.3s ease;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 	min-height: 100px;
+	overflow: hidden;
 }
+
 
 .menu-item:hover {
 	transform: translateY(-5px);
@@ -128,7 +131,22 @@ body {
 	justify-content: center;
 	width: 100%;
 	height: 100%;
-	font-size: 50px; /* ajuste: incrementar o disminuir según prefieras */
+	font-size: 50px;
 	line-height: 1;
 }
 
+.btn {
+    background: #2d7a2d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: auto;
+}
