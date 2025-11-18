@@ -150,3 +150,48 @@ body {
     transform: translateX(-50%);
     margin-top: auto;
 }
+
+/*Opcion "Actividades" */
+
+.actividad-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    background: #d1e7c8;
+    border-bottom: 1px solid #a4c6a0;
+    cursor: pointer;
+}
+
+.actividad-item:hover {
+    background: #c5dfbb;
+}
+
+.actividad-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.detalle-banner {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.detalle-info {
+    background: #cfe6c9;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.home-btn {
+    width: 45px;
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    cursor: pointer;
+}
