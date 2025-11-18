@@ -21,6 +21,33 @@ document.getElementById('open-perfil').addEventListener('click', () => {
     navigate('perfil1');
 });
 
+// Navegacion dentro de "Actividades" ------------------------------------
+
+document.getElementById('open-actividad1').addEventListener('click', () => {
+    navigate('events2');
+});
+
+document.getElementById('open-actividad2').addEventListener('click', () => {
+    navigate('events3');
+});
+
+document.getElementById('volver-actividades').addEventListener('click', () => {
+    navigate('events1');
+});
+
+document.getElementById('home-detail1').addEventListener('click', () => {
+    navigate('home');
+});
+
+document.getElementById('volver-actividades2').addEventListener('click', () => {
+    navigate('events1');
+});
+
+document.getElementById('home-detail2').addEventListener('click', () => {
+    navigate('home');
+});
+
+// ----------------------------------------------------------------------
 
 botonesVolver.forEach(boton => {
     boton.addEventListener('click', () => {
