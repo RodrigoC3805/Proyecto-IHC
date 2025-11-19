@@ -178,7 +178,6 @@ botonesVolver.forEach((boton) => {
 });
 // Inicialización del mapa
 L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-  attribution: "&copy; CARTO",
 }).addTo(map);
 // Inicialización de vista de basura en mapa
 chooseView("map1");
