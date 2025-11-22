@@ -183,3 +183,17 @@ L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
 chooseView("map1");
 
 navigate("home");
+
+
+// Navegación dentro de "Perfil" ------------------------------------
+document.getElementById("open-perfil2").addEventListener("click", () => {
+    navigate("perfil2");
+});
+
+document.getElementById("volver-perfil1").addEventListener("click", () => {
+    navigate("perfil1");
+});
+
+document.getElementById("home-perfil2").addEventListener("click", () => {
+    navigate("home");
+});

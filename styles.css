@@ -240,3 +240,181 @@ body {
     right: 30px;
     cursor: pointer;
 }
+
+/* --- Estilos para la Pantalla Perfil 1 --- */
+.profile-content {
+    flex: 1; /* Permite que el contenido ocupe el espacio restante */
+    padding: 20px; /* Aumentar padding para que no esté tan pegado a los bordes */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 25px; /* Espacio entre los bloques principales */
+    width: 100%; /* Asegura que el contenido ocupe todo el ancho */
+    position: relative; /* Importante para el posicionamiento absoluto del botón */
+}
+
+.profile-header-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.profile-icon {
+    font-size: 55px;
+    color: #1f7a27; /* Verde oscuro */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #1f7a27;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.profile-since {
+    color: #4a4a4a;
+    font-size: 14px;
+}
+
+/* Enlace a Historial */
+.history-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%; /* Ocupa casi todo el ancho */
+    padding-bottom: 8px; /* Espacio para la línea */
+    cursor: pointer;
+    border-bottom: 2px dashed #1f7a27; /* Línea punteada verde */
+    margin-bottom: 25px; /* Más espacio debajo */
+}
+
+.history-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1f7a27;
+}
+
+.history-icon {
+    font-size: 24px;
+    color: #1f7a27;
+}
+
+/* Grid de Estadísticas */
+.stats-grid {
+    display: grid;
+    /* Define 3 columnas: icono, etiqueta (flexible), valor */
+    grid-template-columns: auto 1fr auto; 
+    gap: 15px 10px; /* Espacio vertical y horizontal */
+    width: 90%; /* Ancho de la cuadrícula */
+    margin-bottom: 80px; /* Margen para dejar espacio al botón "Volver" */
+    align-items: center; /* Centra verticalmente los elementos de la fila */
+}
+
+/* Modificamos stat-item para que no sea `display: contents;`
+   ya que queremos que cada grupo de icono+label+value sea su propia "fila" lógica
+   que se alinee con la grilla. */
+.stat-item {
+    display: flex; /* Cambiamos a flex para alinear icono y label dentro de la primera columna */
+    align-items: center;
+    gap: 10px; /* Espacio entre el icono y la etiqueta */
+    grid-column: 1 / span 2; /* El icono y el label ocupan las dos primeras columnas */
+    border-bottom: 1px dashed #cccccc; /* Línea punteada debajo de icono y label */
+    padding-bottom: 8px;
+}
+
+.stat-icon {
+    font-size: 22px;
+    color: #1f7a27;
+    /* No necesitamos align-self/justify-self aquí porque stat-item es flex */
+}
+
+.stat-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1a1a1a;
+    /* Removido el border-bottom aquí porque ahora lo tiene el .stat-item */
+    padding-bottom: 0; /* Ya no necesitamos padding aquí */
+}
+
+.stat-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1f7a27;
+    text-align: right;
+    border-bottom: 1px dashed #cccccc; /* Línea punteada solo para el valor */
+    padding-bottom: 8px;
+    grid-column: 3; /* El valor ocupa la tercera columna */
+}
+
+
+/* --- Estilos para la Pantalla Historial (Perfil 2) --- */
+.activity-list {
+    width: 100%;
+    overflow-y: auto;
+    flex-grow: 1; /* Permite que ocupe el espacio disponible */
+}
+
+.activity-item-detail {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #d1e7c8;
+}
+
+.act-icon {
+    font-size: 28px;
+    color: #1f7a27;
+    margin-right: 15px;
+}
+
+.act-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.act-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.act-time {
+    font-size: 12px;
+    color: #4a4a4a;
+}
+
+.act-date-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #4a4a4a;
+}
+/* Estilo del ícono de ubicación */
+.act-date-location i {
+    color: #1f7a27;
+    font-size: 16px;
+}
+
+/* Ajuste del botón 'Volver' en Perfil 2 para no chocar con 'Home' */
+#perfil2 .btn {
+    left: 25%; /* Mueve el botón 'Volver' a la izquierda */
+}
