@@ -264,11 +264,11 @@ body {
 
 .profile-icon {
     font-size: 55px;
-    color: #1f7a27; /* Verde oscuro */
+    color: #1a1a1a; /* Negro */
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    border: 3px solid #1f7a27;
+    border: 3px solid #1a1a1a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -289,7 +289,7 @@ body {
 }
 
 .profile-since {
-    color: #4a4a4a;
+    color: #1a1a1a;
     font-size: 14px;
 }
 
@@ -301,19 +301,19 @@ body {
     width: 90%; /* Ocupa casi todo el ancho */
     padding-bottom: 8px; /* Espacio para la línea */
     cursor: pointer;
-    border-bottom: 2px dashed #1f7a27; /* Línea punteada verde */
+    border-bottom: 2px dashed #1a1a1a; /* Línea punteada oscura */
     margin-bottom: 25px; /* Más espacio debajo */
 }
 
 .history-text {
     font-size: 18px;
     font-weight: bold;
-    color: #1f7a27;
+    color: #1a1a1a;
 }
 
 .history-icon {
     font-size: 24px;
-    color: #1f7a27;
+    color: #1a1a1a;
 }
 
 /* Grid de Estadísticas */
@@ -341,8 +341,7 @@ body {
 
 .stat-icon {
     font-size: 22px;
-    color: #1f7a27;
-    /* No necesitamos align-self/justify-self aquí porque stat-item es flex */
+    color: #1a1a1a;
 }
 
 .stat-label {
@@ -356,7 +355,7 @@ body {
 .stat-value {
     font-size: 20px;
     font-weight: bold;
-    color: #1f7a27;
+    color: #1a1a1a;
     text-align: right;
     border-bottom: 1px dashed #cccccc; /* Línea punteada solo para el valor */
     padding-bottom: 8px;
