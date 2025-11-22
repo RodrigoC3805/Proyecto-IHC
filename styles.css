@@ -367,8 +367,9 @@ body {
 /* --- Estilos para la Pantalla Historial (Perfil 2) --- */
 .activity-list {
     width: 100%;
-    overflow-y: auto;
-    flex-grow: 1; /* Permite que ocupe el espacio disponible */
+    overflow-y: auto; /* Permite scroll si la lista es larga */
+    flex-grow: 1;     /* Ocupa todo el espacio disponible */
+    padding-bottom: 90px; /* ¡CLAVE! Espacio reservado al final para los botones */
 }
 
 .activity-item-detail {
@@ -414,7 +415,23 @@ body {
     font-size: 16px;
 }
 
-/* Ajuste del botón 'Volver' en Perfil 2 para no chocar con 'Home' */
+/* --- BOTONES FIJOS SOLO PARA PERFIL 2 --- */
+/* Usamos #perfil2 para asegurarnos de NO afectar otras pantallas */
+
+/* Botón Volver (Verde) */
 #perfil2 .btn {
-    left: 25%; /* Mueve el botón 'Volver' a la izquierda */
+    position: absolute;
+    bottom: 30px;       /* Altura fija desde abajo */
+    left: 30px;         /* Alineado a la izquierda */
+    transform: none;    /* Anulamos el centrado global del botón */
+    margin: 0;
+    z-index: 20;        /* Asegura que esté por encima de la lista */
+}
+
+/* Botón Home (Casita) */
+#perfil2 .home-btn {
+    position: absolute;
+    bottom: 30px;       /* Misma altura que el botón Volver */
+    right: 30px;        /* Alineado a la derecha */
+    z-index: 20;
 }
