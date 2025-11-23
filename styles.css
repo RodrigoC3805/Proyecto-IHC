@@ -209,14 +209,31 @@ body {
     opacity: 0;
     transition: opacity 0.5s ease;
     z-index: 9999;
+    width: 250px;
+
+    /* NUEVO para columnas */
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
+/* Ícono grande a la izquierda */
+.icono-alerta {
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+/* Texto */
+.texto-alerta {
+    display: block;
+    line-height: 1.2;
+}
 .notificacion-visible {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 .notificacion-hidden {
-    opacity: 0;
+    opacity: 0 !important;
 }
 /*Opcion "Actividades" */
 

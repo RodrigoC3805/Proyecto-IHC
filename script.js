@@ -207,6 +207,10 @@ function moverCamionYNotificar() {
     let notif = document.getElementById("notificacion-camion");
     notif.classList.remove("notificacion-hidden");
     notif.classList.add("notificacion-visible");
+    setTimeout(() => {
+      notif.classList.remove("notificacion-visible");
+      notif.classList.add("notificacion-hidden");
+    }, 5000);
   }, 5000);
 }
 // Llamadas a funciones
