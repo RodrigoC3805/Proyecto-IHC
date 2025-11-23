@@ -153,8 +153,8 @@ body {
 
 /*Tarea mapa */
 #mapa-interactivo {
-	height: 42vh;
-	width: 40vh;
+	height: 310px;
+	width: 300px;
 	border: 4px solid #1f7a27;
 }
 
@@ -195,7 +195,29 @@ body {
 .icono-btn-mapa {
 	height: 50px;
 }
+#notificacion-camion {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1f7a27;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 9999;
+}
 
+.notificacion-visible {
+    opacity: 1;
+}
+
+.notificacion-hidden {
+    opacity: 0;
+}
 /*Opcion "Actividades" */
 
 .actividad-item {
