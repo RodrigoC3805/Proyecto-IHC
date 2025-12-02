@@ -63,6 +63,7 @@ const pinCamion = L.icon({
   iconAnchor: [25, 50],
 });
 let camionMarker;
+let reciclajeMarker;
 const nuevaCoordenadaCamion = [-12.053661825195139, -77.08604971368443];
 
 // Listeners: Tarea Mapa
@@ -164,6 +165,7 @@ function chooseView(mapView) {
       coordenadasBasura.forEach((coord) => {
         L.marker(coord, { icon: pinBasura }).addTo(map);
       });
+      mostrarOverlayMapa("Residuos generales");
       break;
     case "map2":
       map.eachLayer((layer) => {
@@ -173,9 +175,23 @@ function chooseView(mapView) {
         }
       });
       L.marker(coordenadaUsuario, { icon: pinUsuario }).addTo(map);
-      coordenadasReciclaje.forEach((coord) => {
-        L.marker(coord, { icon: pinReciclaje }).addTo(map);
+      coordenadasReciclaje.forEach((coord, index) => {
+        if (index == 1) {
+          reciclajeMarker = L.marker(coord, { icon: pinReciclaje }).addTo(map);
+          reciclajeMarker.on("click", () => {
+            mostrarInfoMapa(`
+        <p><strong>Materiales aceptados:</strong></p>
+        <p>- Botellas plásticas</p>
+        <p>- Cartón</p>
+    `);
+          });
+        } else {
+          L.marker(coord, { icon: pinReciclaje }).addTo(map);
+        }
       });
+      mostrarOverlayMapa(
+        "Puntos de Reciclaje, toca los pines para más información"
+      );
       break;
     case "map3":
       map.eachLayer((layer) => {
@@ -190,6 +206,13 @@ function chooseView(mapView) {
       coordenadasCamion.forEach((coord, index) => {
         if (index == 1) {
           camionMarker = L.marker(coord, { icon: pinCamion }).addTo(map);
+          camionMarker.on("click", () => {
+            mostrarInfoMapa(`
+        <p><strong>Horario:</strong></p>
+        <p><strong>Lun-Vie:</strong> 9:00–10:00</p>
+        <p><strong>Sab-Dom:</strong> 8:00–9:00</p>
+    `);
+          });
         } else {
           L.marker(coord, { icon: pinCamion }).addTo(map);
         }
@@ -198,6 +221,7 @@ function chooseView(mapView) {
         color: "blue",
         weight: 4,
       }).addTo(map);
+      mostrarOverlayMapa("Camiones de Basura, toca los pines para más información");
       break;
   }
 }
@@ -212,6 +236,31 @@ function moverCamionYNotificar() {
       notif.classList.add("notificacion-hidden");
     }, 5000);
   }, 5000);
+}
+function mostrarOverlayMapa(mensaje = "Procesando...") {
+  const overlay = document.getElementById("mapa-overlay");
+  overlay.querySelector(".overlay-mensaje").textContent = mensaje;
+
+  overlay.classList.add("visible");
+
+  setTimeout(() => {
+    overlay.classList.remove("visible");
+  }, 2500); // 3 segundos
+}
+function mostrarInfoMapa(html) {
+  const info = document.getElementById("mapa-info");
+  info.innerHTML = html;
+
+  info.classList.remove("oculto");
+  info.classList.add("visible");
+  setTimeout(() => {
+    ocultarInfoMapa();
+    }, 5000);
+}
+function ocultarInfoMapa() {
+  const info = document.getElementById("mapa-info");
+  info.classList.remove("visible");
+  info.classList.add("oculto");
 }
 // Llamadas a funciones
 botonesVolver.forEach((boton) => {
